@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.wakilytech.ride_go.auth.AuthScreen
 
 import ridego.composeapp.generated.resources.Res
 import ridego.composeapp.generated.resources.compose_multiplatform
@@ -26,11 +27,17 @@ fun App() {
                 Text("Click me!")
             }
             AnimatedVisibility(showContent) {
+                AuthScreen(
+                    onLogin = { email, password -> /* Handle login */ },
+                    onRegister = { /* Handle register */ }
+                )
+                /*
                 val greeting = remember { Greeting().greet() }
                 Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
+                Image(painterResource(Res.drawable.compose_multiplatform), null)
+                Text("Compose: $greeting")
                 }
+                */
             }
         }
     }
