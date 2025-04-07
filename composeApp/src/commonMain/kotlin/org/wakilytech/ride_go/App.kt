@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.wakilytech.ride_go.home.DashboardScreen
+import org.wakilytech.core.designsystem.extension.applyRadius
 
 @Composable
 @Preview

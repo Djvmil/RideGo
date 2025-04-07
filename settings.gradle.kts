@@ -29,6 +29,8 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-include(":data")
-include(":domain")
-include(":feature")
+include(":core:domain")
+include(":core:data")
+include(":core:common")
+include(":core:designsystem")
+include(":feature:auths")

@@ -31,7 +31,6 @@ kotlin {
     }
     
     jvm("desktop")
-    
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -60,6 +59,9 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
+            api(projects.core.common)
+            api(projects.core.designsystem)
+            api(projects.feature.auths)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
