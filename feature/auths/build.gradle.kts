@@ -20,6 +20,11 @@ kotlin {
     wasmJs { browser() }
 
     sourceSets {
+        androidMain {
+            dependencies {
+                implementation(compose.preview)
+            }
+        }
         commonMain.dependencies {
             api(projects.core.common)
             implementation(projects.core.domain)
@@ -55,4 +60,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+dependencies {
+    debugImplementation(compose.uiTooling)
 }
